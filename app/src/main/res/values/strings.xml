@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="next">Next</string>
+    <string name="check_connection">Check Connection</string>
+    <string name="login_fragment">Login</string>
+    <string name="signup_fragment">Sign Up</string>
+    <string name="forgot_password_fragment">Forgot Password</string>
+</resources>

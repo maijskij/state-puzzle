@@ -7,4 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="error">#EC1111</color>
+    <color name="connecting">#FF921C</color>
+    <color name="connected">#34C734</color>
 </resources>

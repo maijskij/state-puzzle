@@ -13,14 +13,21 @@ import androidx.core.content.ContextCompat
 import com.example.myapplication.R
 import com.example.myapplication.data.ConnectionState
 
+/*
+*   ConnectionPopUp Toast generates error logs during the runtime,
+*   E/Toast: setGravity() shouldn't be called on text toasts, the values won't be used
+*   Hence, this popup implementation is not good long term solution. However I find it
+*   as a very quick and efficient way to implement colorful popup "at the top" of the screen
+*   as it was described in the challenge description.
+* */
+
 object ConnectionPopUp {
 
     private fun showToast(
         layoutInflater: LayoutInflater,
         activity: Activity,
         @ColorRes color: Int,
-        @StringRes message: Int,
-        showDuration: Int = Toast.LENGTH_LONG
+        @StringRes message: Int
     ): Toast {
         val layout: View =
             layoutInflater.inflate(
@@ -34,7 +41,7 @@ object ConnectionPopUp {
         }
         return Toast(activity.applicationContext).apply {
             setGravity(Gravity.TOP or Gravity.FILL_HORIZONTAL, 0, 0)
-            duration = showDuration
+            duration = Toast.LENGTH_SHORT
             view = layout
         }
     }
@@ -46,21 +53,18 @@ object ConnectionPopUp {
                 this,
                 R.color.error,
                 R.string.connection_error,
-                Toast.LENGTH_SHORT
             )
             ConnectionState.CONNECTING -> showToast(
                 layoutInflater,
                 this,
                 R.color.connecting,
                 R.string.connecting,
-                Toast.LENGTH_SHORT
             )
             ConnectionState.CONNECTION_ESTABLISHED -> showToast(
                 layoutInflater,
                 this,
                 R.color.connected,
                 R.string.connection_established,
-                Toast.LENGTH_SHORT
             )
         }
     }

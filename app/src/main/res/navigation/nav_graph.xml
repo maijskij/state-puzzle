@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/LoginFragment"
-        android:name="com.example.myapplication.LogInFragment"
+        android:name="com.example.myapplication.ui.LogInFragment"
         android:label="@string/login_fragment"
         tools:layout="@layout/fragment_login">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/SignUpFragment"
-        android:name="com.example.myapplication.SignUpFragment"
+        android:name="com.example.myapplication.ui.SignUpFragment"
         android:label="@string/signup_fragment"
         tools:layout="@layout/fragment_signup">
 
@@ -26,7 +26,7 @@
     </fragment>
     <fragment
         android:id="@+id/ForgotPasswordFragment"
-        android:name="com.example.myapplication.ForgotPasswordFragment"
+        android:name="com.example.myapplication.ui.ForgotPasswordFragment"
         android:label="@string/forgot_password_fragment"
         tools:layout="@layout/fragment_forgot_password" />
 </navigation>

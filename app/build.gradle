@@ -32,9 +32,17 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {
+
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    implementation("io.reactivex.rxjava3:rxkotlin:3.0.0")
+
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
@@ -42,7 +50,14 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.navigation:navigation-fragment-ktx:2.4.2'
     implementation 'androidx.navigation:navigation-ui-ktx:2.4.2'
+
     testImplementation 'junit:junit:4.13.2'
+    testImplementation "org.mockito:mockito-core:4.2.0"
+    testImplementation "org.mockito:mockito-inline:4.2.0"
+    testImplementation "org.mockito.kotlin:mockito-kotlin:3.2.0"
+    testImplementation "org.assertj:assertj-core:3.21.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }

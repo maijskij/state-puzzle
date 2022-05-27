@@ -5,4 +5,9 @@
     <string name="login_fragment">Login</string>
     <string name="signup_fragment">Sign Up</string>
     <string name="forgot_password_fragment">Forgot Password</string>
+    <string name="connection_error">Connection error</string>
+    <string name="connecting">Connectiing</string>
+    <string name="connection_established">Connection established</string>
+    <string name="message_sent">Message sent</string>
+    <string name="send_commands">Send Commands</string>
 </resources>
